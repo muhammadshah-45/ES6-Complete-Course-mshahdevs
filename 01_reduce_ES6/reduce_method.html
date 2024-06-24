@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Concepts with Stephengrider</title>
+    <style>
+        body{
+            background: rgb(45, 44, 44);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h3>Reduce Method ES6</h3>
+    <p>
+       i- The reduce() method executes a reducer function for array element. <br>
+
+ii-  The reduce() method returns a single value: the function's accumulated result. <br>
+
+The reduce() method does not execute the function for empty array elements. <br>
+
+The reduce() method does not change the original array. <br>
+    </p>
+    <h2>Syntax:-</h2>
+    <h3>array.reduce(function(total, currentValue, currentIndex, arr), initialValue)</h3>
+ 
+    <!-- Project by reduce method  -->
+     <h1>Project By array.reduce method.</h1>
+    <h2>I am gonna create an array of Objects called Primary  Colors</h2>
+ <h3>Next project for Interviewer</h3>
+ <p>We know that we want a function that takes a string and returns a boolean of some kind of boolean basically says like is this expression balanced or not.</p>
+ <h2>How the code work</h2>
+ <p>
+    1. The input string is split into an array of characters.
+    2. The reduce() method is applied to the array, starting with an initial value of 0.
+    3. For each character, the callback function increments or decrements the previous value based on whether it's an opening or closing parenthesis.
+    4. If the final previous value is 0, the parentheses are balanced, and the function returns true (due to the negation !).
+    5. If the final previous value is not 0, the parentheses are unbalanced, and the function returns false.
+    
+    In the first example, "(((", the previous value becomes 3 (incremented three times), so the function returns false.
+    
+    In the second example, ")(", the previous value becomes -1 (incremented once and then decremented once), so the function returns false.</p>
+
+    <hr>
+  <h1>  Sum of values in an object array (reduce Method) </h1>
+To sum up the values contained in an array of objects, you must supply an initialValue, so that each item passes through your function.
+    <script src="/01_reduce_ES6/reduce_method.js"></script>
+</body>
+</html>

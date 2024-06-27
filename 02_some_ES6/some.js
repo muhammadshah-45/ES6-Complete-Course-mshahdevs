@@ -145,3 +145,108 @@ function isBiggerThan10(element, index, array) {
  let aar_2 = arr2.some(isBiggerThan10); // true
   console.log(arr_1);
   console.log(aar_2);
+
+
+  console.log("Checking whether a value exists in an array");
+const fruits_1 = ["apple", "banana", "mango", "guava"];
+
+function checkAvailability(arr, val) {
+  return arr.some((arrVal) => val === arrVal);
+}
+
+checkAvailability(fruits_1, "kela"); // false
+checkAvailability(fruits_1, "banana"); // true
+
+
+const collegestudent = ["Muhammad",450,"English"];
+
+function collegestudentData(subject,marks){
+    return subject.some((subjects)=> marks === subjects)
+}
+
+console.log(collegestudentData(collegestudent,450));
+
+
+console.log("Converting any value to Boolean");
+
+const TRUTHY_VALUES = [true, "true",1];
+
+function getBoolean(value){
+    if(typeof value === "string"){
+        value = value.toLowerCase().trim();
+    }else{
+
+    }
+    return TRUTHY_VALUES.some((x)=> x === value);
+
+}
+
+console.log(getBoolean(false)//
+);
+console.log(getBoolean(1)); // true
+
+
+console.log("Using the third argument of callbackFn");
+
+const numbers_1 =[1,2,3,4,4,5];
+
+
+const isIncreasing = !numbers_1.filter((num)=>num > 0).some((num,index,array)=>{
+    // without the array argument, there's no way to easily access the 
+    // the intermediate array without saving it to a variable.
+
+    if(index === 0) return false;
+    return num <= array[index -1];
+});
+
+console.log(isIncreasing); // false;
+console.log(numbers_1);
+
+
+console.log("Using some() on sparse arrays");
+
+document.write("In JavaScript, sparse arrays are arrays that have empty slots or holes, which are represented by the value undefined. When using some() on a sparse array, the callback function will only be called for the elements that exist, and not for the holes.")
+
+let data_1 = [1, ,2,5,8];
+let data_11 = data_1.some((x) => x === undefined);
+
+// console.log(data_1);// undefine (hole => empty element)
+console.log(data_11);
+
+let data_2 = [1, ,1];
+
+let data_22=data_2.some((x)=> x !== 1);
+
+console.log(data_2);
+console.log(data_22); // false
+
+let data_3=[1,undefined,1];
+let data_33 = data_3.some((x)=> x !== 1)
+console.log(data_3);
+console.log(data_33);
+
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: 3, // ignored by some() since length is 3
+};
+console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
+// false
+
+
+
+
+var ages= [6,30,25,20];
+
+document.write(ages +"<br>");
+
+var b = ages.some(checkAge);
+
+document.write( b)
+console.log(b);
+
+function checkAge(age){
+    return age > 18; 
+}

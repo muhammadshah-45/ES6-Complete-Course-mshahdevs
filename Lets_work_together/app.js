@@ -114,3 +114,22 @@ const oddNumbers = numbers.filter((number)=> number % 2  !== 0 );
 console.log(evenNumbers);
 
 console.log(oddNumbers);
+var answers = [];
+for (var i = 0; i < 5; i++) {
+     answers[i] = prompt("Enter yes or no");
+     if (answers[i] === "yes") {
+        console.log(answers[i]);
+    var  positive = 1;
+    }
+  }
+
+  console.log(answers);
+
+  // An example:
+
+var nums = [1, 2];
+for (var i = 0; i < 2; i++) {
+  if (nums[i] === nums[i]) {
+    alert(nums[i]);
+  }
+}

@@ -54,11 +54,11 @@ console.log(array.entries);
 
 function isPrime(number){
     // console.log(number);
-// console.log(`checking if ${number} is prime numm....`);
+//  console.log(`checking if ${number} is prime num....`);
     for(let i = 2; number > i; i++ ){
         // console.log(`i:${i} Number:${number}`);
 
-        // console.log(`checking  if numm ${number} is divisible by i:${i}`);
+        //  console.log(`checking  if numm ${number} is divisible by i:${i}`);
         if(number % i === 0){
             // console.log(`if statement i is :${i} and Number: ${number}`);
             // console.log(`${number} is divisible by ${i},so it's not prime numm..`);
@@ -166,14 +166,44 @@ const vegetables =[
     {name:"carrot",color:"blurish"}
 ];
 
+console.log(arr);
 function filteritem(arr,query){
-    console.log(arr);
     console.log(query);
     return arr.filter((el)=> el.color.toLowerCase().includes(query.toLowerCase()))
 }
 console.log(filteritem(vegetables,"red"));
 
+const fruits_3 = [
+    {name:"mango",color:"yellow"},
+    {name:"banana",color:"yellow"},
+    {name:"strawberry",color:"red"},
+    {name:"water melon",color:"green"}
+];
+
+const filteredItems_1 = ((fruitName,fruitColor)=>{
+    console.log(fruitName);
+    return fruitName.filter((passNamesofFruits)=> passNamesofFruits.name.includes(fruitColor))
+})
+console.log(filteredItems_1(fruits_3,"banana"));
+function filteredItems(fruitName,fruitColor){
+    console.log(fruitName);
+    return fruitName.filter((names)=> names.name.includes(fruitColor))
+};
+
+console.log(filteredItems(fruits_3,"mango"));
 
 
+const studentsData =[
+    {name:"Muhammad Shah", subject:"Computer Science"},
+    {name:"Abbas Khan",subject:"Web Developer"},
+    {name:"Yumnah",subject:"Science"}
+
+];
+
+
+const studentSubject= studentsData.map(function(studentName){
+    return studentName.name;
+})
+console.log(studentSubject);
 
 

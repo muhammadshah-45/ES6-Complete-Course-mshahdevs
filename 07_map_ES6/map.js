@@ -18,10 +18,10 @@ let cars = [
   { model: "Civic", price: "Cheap" },
   { model: "toyota", price: "expensive" },
 ];
-let prices = cars.map((car) => {
+let carModels = cars.map((car) => {
   return car.model;
 });
-console.log(prices);
+console.log(carModels);
 
 const kvArray = [
   { key: 1, name: "Shah" },
@@ -29,7 +29,7 @@ const kvArray = [
   { key: 3, name: "devs" },
 ];
 
-const reformattedArray = kvArray.map(({ key, name }) => ({ [key]: name }));
+const reformattedArray = kvArray.map(({ key, name }) => ({ [key]: name} ));
 
 // const reformattedArrays = kvArray.map(({ key, value }) => {
 //   // console.log([key="name"]);

@@ -57,3 +57,34 @@ const mobiles = mobilePhones.map(function (mobileModel) {
 });
 console.log(mobilePhones);
 console.log(mobiles);
+
+var numbers_1 = [1,2,3,4,5,6,7,8,9,10,11,12] ;
+var doubleNumbers = [];
+for(var i = 0; i < numbers_1.length; i++) {
+  doubleNumbers.push(numbers_1[i]*2);
+}
+var doubled = numbers_1.map(function(number) {
+  return number * 2;
+})
+console.log(doubled);
+console.log(doubleNumbers);
+
+var cars_1 = [
+  { name:"buik",price:"cheap"},
+  {
+    name:"ford",
+    price:"expensive"
+  }
+]
+var car =cars_1.map(function(car) {
+  return car.price;
+})
+console.log(car);
+
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value) {
+  return value >18;
+}
+console.log(numbers2);

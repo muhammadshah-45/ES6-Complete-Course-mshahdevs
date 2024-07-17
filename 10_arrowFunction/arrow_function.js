@@ -40,3 +40,6 @@ const team = {
 }
 console.log(team.teamSummary());
 
+const doubles= (number) => number*2;
+console.log(doubles(2));
+

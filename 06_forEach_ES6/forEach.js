@@ -52,3 +52,11 @@ numbers.forEach(function adder(number){
 console.log(add);
 
 
+var studentNames =["Muhammad","Shah","Devs"];
+
+var student =studentNames.forEach(function(names){
+    console.log(names);
+}
+);
+console.log(student);
+

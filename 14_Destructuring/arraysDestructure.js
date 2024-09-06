@@ -14,3 +14,17 @@ console.log(name1,rest);
 
 // let { length } = array;
 // console.log(length); // Outputs: Google Inc
+
+const student =[
+    "Muhammad Shah",
+    344,
+    "Computer Science"
+]
+
+const [fullName,marks,subject] = student
+
+console.log(fullName ,"\n",marks,subject);
+
+const [lastName,...allData] = student
+
+console.log(allData);

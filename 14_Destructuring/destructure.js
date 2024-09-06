@@ -46,3 +46,47 @@ function savedTheData({name:firstName, age, gender, address},{lastName}){
 
 let result =savedTheData(person,{lastName:"Shah"});
 console.log(result);
+
+
+const student = [
+    {names:"Shah",marks:343,subject:"Computer Science"},
+    {names:"hamad",marks:312,subject:{names:"ahmad"}}
+]
+
+const [{names:lastName,marks:myMarks},{names:hamadName,subject:{names:ahmadName}}] = student;
+console.log(lastName,myMarks);
+console.log(hamadName,{ahmadName});
+
+
+const developer = {
+    devName:"shahDevs",
+    marks:"443",
+    address:{
+        street:"Sheikh Muhammadi",
+        city:"Peshawar"
+    }
+}
+
+const {
+    devName:firstName,
+
+} = developer
+
+console.log(firstName)
+
+
+// var animals=["horse", "ox", "cow", "pig", "duck"];
+// var i = 0;
+// while (i < animals.length) {
+//   if (animals[i] === "ox") {
+//     alert("Found it!");
+//     break;
+//   }
+//   i++;
+// }
+// var i = 0;
+// do {
+//   alert(i);
+//   i++;
+// } while (i < 0);
+
